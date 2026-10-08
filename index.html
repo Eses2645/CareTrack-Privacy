@@ -56,17 +56,19 @@
   <section>
     <h2>5. Saklama ve güvenlik</h2>
     <p>Kayıt içerikleri ve eski fotoğraflar, Android Keystore'da uygulamaya özel tutulan anahtarla AES-GCM kullanılarak şifrelenir. Kayıt türü, zaman, durum ve rastgele profil/ilaç kimlikleri gibi sorgu metaverileri yerel veritabanında bulunur; veritabanı dosyasının tamamı şifreli değildir.</p>
+    <p>İsteğe bağlı şifreli yedekleme, tüm hesap profillerinin kayıtlarını ve varsa eski fotoğraflarını seçtiğiniz dosyaya aktarır. Dosya, seçtiğiniz en az 10 karakterlik paroladan PBKDF2-HMAC-SHA256 ile türetilen anahtarla AES-256-GCM kullanılarak şifrelenir. Parola saklanmaz ve kurtarılamaz. Yedek otomatik olarak herhangi bir bulut hizmetine gönderilmez; dosya konumunu siz seçersiniz. Geri yükleme, mevcut hesap kayıtlarının tamamını yedekteki kayıtlarla değiştirir. Cihaza özgü ayarlar taşınmaz.</p>
     <p>Otomatik Android yedekleme kapalıdır. Uygulamayı kaldırmak yerel kayıtları ve uygulamanın Keystore anahtarını kaldırır. Başka cihazda eski kayıtların otomatik geri yüklenmesi sağlanmaz.</p>
   </section>
   <section>
     <h2>6. Bildirimler ve dışa aktarma</h2>
+    <p>Stok bitmeden hatırlatma ilaç başına isteğe bağlıdır; kalan stok ve kayıtlı programdan hesaplanan tahmine dayanır. Gerçek kullanım farklı olabilir. Bildirim metni ilaç adını içermez.</p>
     <p>Hatırlatma bildirimleri Android tarafından gösterilir. İlaç ayrıntıları varsayılan olarak gizlidir. Bildirim izinlerini cihaz ayarlarından yönetebilirsiniz.</p>
     <p>PDF, CSV ve JSON dışa aktarma işlemlerini siz başlatır ve paylaşım hedefini Android paylaşım ekranında seçersiniz. Bu dosyalar okunabilir sağlık verisi içerir. Uygulamanın geçici paylaşım dosyaları sonraki açılışlarda 24 saatten eskiyse temizlenir. Başka uygulamalara paylaştığınız kopyalar CareTrack tarafından geri çağrılamaz.</p>
   </section>
   <section>
     <h2>7. Silme ve talepleriniz</h2>
     <p>Uygulama içinde tek kaydı, ilacı, profili veya tüm yerel verileri silebilirsiniz. Tam silme yazılı onay ister. Yerel verileri silmek Firebase hesabınızı, Health Connect'teki kaynak kayıtları veya daha önce dışarı aktardığınız dosyaları silmez.</p>
-    <p>Firebase hesabının silinmesi uygulama içinde henüz sunulmaz. Hesap ve gizlilik talepleri için destek adresimize başvurabilirsiniz; hesabın size ait olduğunu doğrulamak için gerekli bilgiler istenebilir. Destek e-postasına ilaç veya ölçüm bilgilerinizi göndermeniz gerekmez.</p>
+    <p>Ayarlar → Hesap → Hesabımı sil işlemi, hesap şifrenizi yeniden doğrulayarak Firebase hesabını ve bu telefondaki hesap kayıtlarını siler. Diğer cihazlarda kalan yerel kopyalar ve daha önce paylaştığınız dosyalar otomatik silinmez. Hesap ve gizlilik talepleri için destek adresimize başvurabilirsiniz; destek e-postasına ilaç veya ölçüm bilgilerinizi göndermeniz gerekmez.</p>
   </section>
   <section>
     <h2>8. Politika güncellemeleri</h2>
