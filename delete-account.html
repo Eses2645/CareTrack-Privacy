@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CareTrack hesabı ve ilişkili verileri silme talebi.">
+  <title>CareTrack | Hesap Silme</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #243047; background: #f5f6fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.65; }
+    main { max-width: 760px; margin: 48px auto; padding: 36px; background: white; border: 1px solid #e4e7ef; border-radius: 24px; }
+    .brand { font-weight: 700; color: #4c58a8; }
+    h1 { margin: 8px 0; font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.2; }
+    h2 { margin-top: 30px; font-size: 1.2rem; }
+    p, ol { margin: 12px 0; }
+    a { color: #35469e; overflow-wrap: anywhere; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #4c58a8; outline-offset: 4px; }
+    .action { display: inline-block; margin: 8px 0; padding: 12px 18px; border-radius: 12px; background: #35469e; color: white; font-weight: 600; text-decoration: none; }
+    .note { padding: 16px; border-radius: 12px; background: #eef1fa; }
+    footer { border-top: 1px solid #e4e7ef; margin-top: 32px; padding-top: 20px; }
+    @media (max-width: 600px) { main { margin: 0; padding: 28px 20px; border: 0; border-radius: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="brand">CareTrack</div>
+  <h1>Hesabınızı ve verilerinizi silme</h1>
+  <p>CareTrack hesabınızı uygulamayı yeniden yüklemeden de silme talebinde bulunabilirsiniz.</p>
+
+  <h2>Uygulama dışından silme talebi</h2>
+  <p>Kayıtlı e-posta adresinizden aşağıdaki bağlantıyla CareTrack Company destek ekibine “CareTrack hesabımın ve ilişkili bulut verilerimin silinmesini istiyorum” yazın. Şifrenizi, eşitleme parolanızı veya sağlık kayıtlarınızı göndermeyin.</p>
+  <a class="action" href="mailto:caretrackcompany@gmail.com?subject=CareTrack%20hesap%20silme%20talebi&amp;body=CareTrack%20hesab%C4%B1m%C4%B1n%20ve%20ili%C5%9Fkili%20bulut%20verilerimin%20silinmesini%20istiyorum.">Silme talebi e-postası oluştur</a>
+  <p>E-posta uygulamanız açılmazsa <a href="mailto:caretrackcompany@gmail.com">caretrackcompany@gmail.com</a> adresine kayıtlı e-postanızdan doğrudan yazabilirsiniz. Kayıtlı adrese erişiminiz yoksa aynı adrese bunu belirtin; hesabın size ait olduğunu doğrulamak için sizinle iletişime geçeriz. İsteğiniz tamamlandığında sonucu e-postayla bildiririz.</p>
+
+  <h2>Uygulamanın içinden silme</h2>
+  <p>CareTrack → Ayarlar ve profil → Hesabımı sil yolunu izleyin. İşlem şifrenizi yeniden doğrular ve şifreli bulut kopyasını, Firebase hesabınızı ve kullandığınız cihazdaki hesap kayıtlarını siler.</p>
+
+  <h2>Neler silinir?</h2>
+  <p>Talebiniz doğrulandıktan sonra Firebase Authentication hesabınız ve CareTrack'ın Firestore'da tuttuğu hesabınıza bağlı şifreli eşitleme kopyası silinir. Uygulamanın içinden silerseniz o cihazdaki yerel kayıtlar da silinir.</p>
+  <p class="note">Başka telefonlarda çevrimdışı duran yerel kopyalara uzaktan erişemeyiz. Bu kopyaları ilgili cihazda uygulamanın içinden silin veya uygulamayı kaldırın. Daha önce dışa aktarıp başka yerde sakladığınız PDF, CSV, JSON ve yedek dosyalarını da siz silmelisiniz.</p>
+
+  <footer>
+    <strong>CareTrack Company</strong><br>
+    <a href="index.html">Gizlilik Politikası</a> · <a href="mailto:caretrackcompany@gmail.com">Destek</a>
+  </footer>
+</main>
+</body>
+</html>
+
