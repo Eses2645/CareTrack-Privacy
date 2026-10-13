@@ -27,13 +27,13 @@
   <header>
     <div class="brand">CareTrack</div>
     <h1>Gizlilik Politikası</h1>
-    <p class="meta">Yayıncı: CareTrack Company<br>Son güncelleme: 8 Ekim 2026</p>
+    <p class="meta">Yayıncı: CareTrack Company<br>Son güncelleme: 13 Ekim 2026</p>
     <p>Bu politika, CareTrack Android uygulamasındaki kişisel bilgilerin nasıl işlendiğini açıklar. Gizlilik ve destek talepleriniz için <a href="mailto:caretrackcompany@gmail.com">caretrackcompany@gmail.com</a> adresine ulaşabilirsiniz.</p>
   </header>
   <section>
     <h2>1. Sağlık kayıtları</h2>
-    <p>İlaç alma günlüğü notları ve seçtiğiniz gerekçeler, doktor görüşmesi soruları ve stok kontrol kayıtları da yalnız cihazda saklanır. Haftalık stok kontrol bildirimi isteğe bağlıdır. Mahrem hatırlatma metni ve simgesi yerel tercihlerdir. Seyahat aracı, onayınız olmadan ilaç programını değiştirmez. Doktor görüşmesi özetine dahil edilecek ölçümleri seçebilir; PDF'yi paylaşmayı kendiniz başlatabilirsiniz.</p>
-    <p>Profil bilgileri, ilaçlar, doz programları, alım geçmişi, stok hareketleri, ölçümler, semptomlar ve randevular cihazınızdaki uygulamaya özel alanda saklanır. Bu sağlık kayıtları Firebase'e veya reklam hizmetlerine gönderilmez. Aynı hesapla başka cihazda giriş yapmak sağlık kayıtlarını otomatik taşımaz.</p>
+    <p>İlaç alma günlüğü notları ve seçtiğiniz gerekçeler, doktor görüşmesi soruları ve stok kontrol kayıtları da varsayılan olarak cihazda saklanır. Şifreli cihazlar arası eşitlemeyi açarsanız bu kayıtların şifreli kopyası da bulutta tutulur. Haftalık stok kontrol bildirimi isteğe bağlıdır. Mahrem hatırlatma metni ve simgesi yerel tercihlerdir. Seyahat aracı, onayınız olmadan ilaç programını değiştirmez. Doktor görüşmesi özetine dahil edilecek ölçümleri seçebilir; PDF'yi paylaşmayı kendiniz başlatabilirsiniz.</p>
+    <p>Profil bilgileri, ilaçlar, doz programları, alım geçmişi, stok hareketleri, ölçümler, semptomlar ve randevular varsayılan olarak cihazınızdaki uygulamaya özel alanda saklanır. Reklam hizmetlerine sağlık kaydı gönderilmez. Şifreli cihazlar arası eşitlemeyi açarsanız bu kayıtların şifreli kopyası hesabınıza bağlı olarak Firebase Cloud Firestore'a aktarılır.</p>
     <p>Sağlık kayıtları ve uygulama tercihleri cihaz üzerinde hesap başına ayrılır. Yeni sürümde kamera veya fotoğraf seçimi bulunmaz; önceki sürümlerden kalan şifreli fotoğraflar mevcut yerel kayıtlarla birlikte korunur.</p>
   </section>
   <section>
@@ -57,7 +57,8 @@
     <h2>5. Saklama ve güvenlik</h2>
     <p>Kayıt içerikleri ve eski fotoğraflar, Android Keystore'da uygulamaya özel tutulan anahtarla AES-GCM kullanılarak şifrelenir. Kayıt türü, zaman, durum ve rastgele profil/ilaç kimlikleri gibi sorgu metaverileri yerel veritabanında bulunur; veritabanı dosyasının tamamı şifreli değildir.</p>
     <p>İsteğe bağlı şifreli yedekleme, tüm hesap profillerinin kayıtlarını ve varsa eski fotoğraflarını seçtiğiniz dosyaya aktarır. Dosya, seçtiğiniz en az 10 karakterlik paroladan PBKDF2-HMAC-SHA256 ile türetilen anahtarla AES-256-GCM kullanılarak şifrelenir. Parola saklanmaz ve kurtarılamaz. Yedek otomatik olarak herhangi bir bulut hizmetine gönderilmez; dosya konumunu siz seçersiniz. Geri yükleme, mevcut hesap kayıtlarının tamamını yedekteki kayıtlarla değiştirir. Cihaza özgü ayarlar taşınmaz.</p>
-    <p>Otomatik Android yedekleme kapalıdır. Uygulamayı kaldırmak yerel kayıtları ve uygulamanın Keystore anahtarını kaldırır. Başka cihazda eski kayıtların otomatik geri yüklenmesi sağlanmaz.</p>
+    <p>Cihazlar arası eşitleme ayrıca açılır. Uygulama, tüm profillerin sağlık kayıtları ve varsa eski fotoğrafları içeren kopyayı eşitleme parolanızla bu cihazda AES-256-GCM kullanarak şifreler. Firebase Cloud Firestore, doğrulanmış hesap kimliğinize bağlı şifreli parçaları, parça sayısını ve güncelleme zamanını saklar; düz sağlık kayıtlarını almaz. Eşitleme parolası cihazda Android Keystore ile şifreli saklanır, başka telefonda yeniden girilir ve CareTrack tarafından kurtarılamaz. Uygulama açıkken değişiklikler ve arka planda periyodik eşitleme denenir. İki cihazda kayıtlar ayrı ayrı değişmişse uygulama sessizce birini silmez; hangi tam kopyanın korunacağına siz karar verirsiniz.</p>
+    <p>Otomatik Android yedekleme kapalıdır. Uygulamayı kaldırmak yerel kayıtları ve uygulamanın Keystore anahtarını kaldırır. Buluttan başka cihazda geri yükleme için doğrulanmış hesapla giriş ve eşitleme parolası gerekir.</p>
   </section>
   <section>
     <h2>6. Bildirimler ve dışa aktarma</h2>
@@ -68,7 +69,7 @@
   <section>
     <h2>7. Silme ve talepleriniz</h2>
     <p>Uygulama içinde tek kaydı, ilacı, profili veya tüm yerel verileri silebilirsiniz. Tam silme yazılı onay ister. Yerel verileri silmek Firebase hesabınızı, Health Connect'teki kaynak kayıtları veya daha önce dışarı aktardığınız dosyaları silmez.</p>
-    <p>Ayarlar → Hesap → Hesabımı sil işlemi, hesap şifrenizi yeniden doğrulayarak Firebase hesabını ve bu telefondaki hesap kayıtlarını siler. Diğer cihazlarda kalan yerel kopyalar ve daha önce paylaştığınız dosyalar otomatik silinmez. Hesap ve gizlilik talepleri için destek adresimize başvurabilirsiniz; destek e-postasına ilaç veya ölçüm bilgilerinizi göndermeniz gerekmez.</p>
+    <p>Ayarlar → Hesap → Hesabımı sil işlemi, hesap şifrenizi yeniden doğrulayarak şifreli bulut kopyasını, Firebase hesabını ve bu telefondaki hesap kayıtlarını siler. Bulut kopyası silinemezse hesap silme işlemi durdurulur. Diğer cihazlarda kalan yerel kopyalar ve daha önce paylaştığınız dosyalar otomatik silinmez. Hesap ve gizlilik talepleri için destek adresimize başvurabilirsiniz; destek e-postasına ilaç veya ölçüm bilgilerinizi göndermeniz gerekmez.</p>
   </section>
   <section>
     <h2>8. Politika güncellemeleri</h2>
@@ -81,3 +82,4 @@
 </main>
 </body>
 </html>
+
